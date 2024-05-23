@@ -58,6 +58,10 @@ class Principal:
                         font=self.fuente_personalizable, pady=2)
         federico.pack()
 
+        mateo = Label(self.seccion_logo, text='Ramallo, Mateo; Legajo: 94441', bg="#4b1a1a", fg="white",
+                      font=self.fuente_personalizable, pady=2)
+        mateo.pack()
+
 
         # Sección #3 - Opciones de Administración
         self.seccion_opciones = Frame(self.master, borderwidth=2, relief="solid", bg="#361414", width=300, height=500)
