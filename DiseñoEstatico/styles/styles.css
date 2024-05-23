@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 750px;
+    height: 500px;
+    border: 1px solid #000;
+}
+
+.seccion-logo {
+    background-color: #4b1a1a;
+    width: 50%;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.seccion-logo h1 {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.seccion-logo .logo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.seccion-logo .integrantes p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+.seccion-opciones {
+    background-color: #361414;
+    width: 50%;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    border-left: 2px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.seccion-opciones h2 {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.botones button {
+    background-color: #301212;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    width: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.botones button:hover {
+    background-color: #4b1a1a;
+}
