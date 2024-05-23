@@ -6,22 +6,57 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #f5f5f5;
-    background-image: url('../images/fondo_principal.png');
+    overflow: hidden; /* Para asegurar que el contenido no desborde el body */
+    position: relative;
 }
 
+@keyframes moveBackground {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-25%); }
+    100% { transform: translateX(0); }
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background-image: url('../images/fondo_principal.png'), url('../images/fondo_principal.png'), 
+                      url('../images/fondo_principal.png'), url('../images/fondo_principal.png');
+    background-size: auto;
+    background-repeat: repeat;
+    background-position: 0 0, 50% 0, 0 50%, 50% 50%;
+    filter: blur(5px);
+    z-index: -1;
+    animation: moveBackground 30s linear infinite;
+}
+
+/* Mantener todos los otros estilos */
 .container {
     display: flex;
-    width: 750px;
-    height: 500px;
+    flex-direction: column; /* Cambiado a columna para mejor responsividad en móviles */
+    width: 90%;
+    max-width: 850px;
+    height: auto; /* Permitir altura automática */
     border: 1px solid #000;
+    background: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para mejorar la visibilidad */
+    position: relative;
+    z-index: 1;
+}
+
+.seccion-logo, .seccion-opciones {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .seccion-logo {
     background-color: #4b1a1a;
-    width: 50%;
     color: white;
-    padding: 20px;
-    box-sizing: border-box;
+    margin-bottom: 20px; /* Añadir margen inferior para espaciar secciones en móviles */
 }
 
 .seccion-logo h1 {
@@ -31,23 +66,17 @@ body {
     margin-bottom: 30px;
 }
 
-.seccion-logo .logo {
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.seccion-logo .integrantes p {
-    margin: 5px 0;
-    font-size: 13px;
+.container .seccion-logo .integrantes ul li {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 20px;
+    list-style: none;
 }
 
 .seccion-opciones {
     background-color: #361414;
-    width: 50%;
     color: white;
-    padding: 20px;
-    box-sizing: border-box;
-    border-left: 2px solid #000;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,4 +105,21 @@ body {
 
 .botones button:hover {
     background-color: #4b1a1a;
+}
+
+/* Media Queries para responsividad */
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row; /* Cambia a fila en pantallas más grandes */
+        height: 500px; /* Mantener altura fija en pantallas grandes */
+    }
+
+    .seccion-logo, .seccion-opciones {
+        width: 50%; /* Dividir espacio en pantallas grandes */
+        margin-bottom: 0; /* Eliminar margen inferior */
+    }
+
+    .seccion-opciones {
+        border-left: 2px solid #000; /* Añadir borde izquierdo */
+    }
 }
