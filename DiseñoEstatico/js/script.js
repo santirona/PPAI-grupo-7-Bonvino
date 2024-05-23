@@ -1,5 +1,6 @@
 function generarRankingVinos() {
     alert("Funcionalidad para generar el ranking de vinos");
+    window.location.href = 'ranking.html';
 }
 
 function boton2() {

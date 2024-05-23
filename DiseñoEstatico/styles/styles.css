@@ -112,6 +112,7 @@ body::before {
     padding: 10px;
     border: none;
     cursor: pointer;
+    border-radius: 10px;;
 }
 
 .botones button:hover {
@@ -134,3 +135,6 @@ body::before {
         border-left: 2px solid #000; /* Añadir borde izquierdo */
     }
 }
+
+
+
