@@ -138,3 +138,123 @@ body::before {
 
 
 
+.formulario-container {
+    margin-top: 40px; /* Espaciado entre el título y el formulario */
+    background-color: #4b1a1a;
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espaciado entre los elementos del formulario */
+}
+
+.form-group label {
+    display: block; /* Mostrar el label en una nueva línea */
+
+}
+.form-group input[type="date"] {
+    width: 100%; /* Hacer que el input ocupe todo el ancho del contenedor */
+}
+
+
+/* 
+Reglas Nuevas para la pagina ranking.html, que se sobreescriben algunas a las otras paginas
+*/
+
+
+/* Mantener todos los otros estilos */
+.container {
+    display: flex;
+    flex-direction: column; /* Cambiado a columna para mejor responsividad en móviles */
+    width: 90%;
+    max-width: 850px;
+    height: auto; /* Permitir altura automática */
+    border: 1px solid #000;
+    background-color: #4b1a1a; /* Cambiado a color rojo oscuro */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para mejorar la visibilidad */
+    position: relative;
+    z-index: 1;
+}
+
+.seccion-logo, .seccion-opciones {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #4b1a1a; /* Aplicar el mismo color al fondo de las secciones */
+}
+
+.seccion-logo {
+    color: white;
+    margin-bottom: 20px; /* Añadir margen inferior para espaciar secciones en móviles */
+}
+
+.seccion-logo h1 {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.container .seccion-logo .integrantes ul li {
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 20px;
+    list-style: none;
+}
+
+.seccion-opciones {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Centrar el texto */
+}
+
+.seccion-opciones h2 {
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los botones */
+}
+
+.botones button {
+    background-color: #301212;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    width: 200px;
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;;
+}
+
+.botones button:hover {
+    background-color: #4b1a1a;
+}
+
+/* Media Queries para responsividad */
+@media (min-width: 600px) {
+    .container {
+        flex-direction: row; /* Cambia a fila en pantallas más grandes */
+        height: 500px; /* Mantener altura fija en pantallas grandes */
+    }
+
+    .seccion-logo, .seccion-opciones {
+        width: 50%; /* Dividir espacio en pantallas grandes */
+        margin-bottom: 0; /* Eliminar margen inferior */
+    }
+
+    .seccion-opciones {
+        border-left: 2px solid #000; /* Añadir borde izquierdo */
+    }
+}
