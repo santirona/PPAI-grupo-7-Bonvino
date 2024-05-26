@@ -12,31 +12,43 @@
         <h2>Mejores Vinos</h2> <br> <br> <br>
         <div class="formulario-container">
             <form action="">
-                <div class="form-group">
-                    <label for="fechaDesde">Fecha Desde:</label>
-                    <input type="date" id="fechaDesde" name="fechaDesde" required>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 form-group">
+                        <label for="fechaDesde">Fecha Desde:</label>
+                        <input type="date" id="fechaDesde" name="fechaDesde" class="form-control" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="fechaHasta">Fecha Hasta:</label>
+                        <input type="date" id="fechaHasta" name="fechaHasta" class="form-control" required>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="fechaHasta">Fecha Hasta:</label>
-                    <input type="date" id="fechaHasta" name="fechaHasta" required>
+                <div class="row justify-content-center">
+                    <div class="col-md-6 form-group">
+                        <label for="tipoReseña">Tipo Reseña:</label>
+                        <select class="form-select" id="tipoReseña" name="tipoReseña" required>
+                            <option value="1">Reseñas Normales</option>
+                            <option value="2">Reseñas de Sommelier</option>
+                            <option value="3">Reseñas de Amigos</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="formaVisualizacion">Forma Visualizacion</label>
+                        <select class="form-select" id="formaVisualizacion" name="formaVisualizacion" required>
+                            <option value="1">PDF</option>
+                            <option value="2">Excel</option>
+                            <option value="3">Mostrar en otra pagina</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="exampleDataList" class="form-label">Datalist example</label>
-                        <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Reseñas...." required>
-                        <datalist id="datalistOptions"> 
-                        <option value="Reseñas Normales">
-                        <option value="Reseñas de Sommelier">
-                        <option value="Reseñas de Amigos">
-                        </datalist>
+                <div class="form-group text-center">
+                    <button type="button" class="btn btn-outline-danger mt-3" id="btnBuscar" onclick="botonBuscar()">Confirmar</button>
                 </div>
-                <button type="button" class="btn btn-outline-danger" id="btnBuscar" onclick="botonBuscar()">Buscar</button>
             </form>
         </div>
     </div>
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
     <script src="./js/script.js"></script>
 </body>
 </html>
+
