@@ -12,4 +12,4 @@ class Provincia:
         pass
 
     def obtenerPais(self):
-        return self.pais.nombre 
+        return self.pais
