@@ -1,9 +1,10 @@
 from clase_pais import Pais
 
 class Provincia:
-    def __init__(self, nombre, pais):
+    def __init__(self, nombre, pais, regionVitivinicola):
         self.nombre = nombre
         self.pais = pais
+        self.regionVitivinicola = regionVitivinicola
 
     def contarRegiones(self):
         pass
