@@ -1,12 +1,12 @@
 from clase_vino import Vino
 
 class Resena:
-    def __init__(self, comentario, es_premium, fecha_resena, puntaje):
+    def __init__(self, comentario, es_premium, fecha_resena, puntaje, vino):
         self.comentario = comentario
         self.es_premium = es_premium
         self.fecha_resena = fecha_resena
         self.puntaje = puntaje
-        self.Vino = Vino
+        self.vino = vino
 
     def esPremium(self):
         return self.es_premium
@@ -38,3 +38,13 @@ class Resena:
     print(prueba_resena.sosDeSommelier()) # False
     print(prueba_resena.sosDePeriodo('2019-01-01', '2020-01-01')) 
 """
+
+vino = Vino(1, "Gran Reserva", "Bodega XYZ", "Mendoza", "Mendoza", "Argentina",  25.50, None)
+resena = Resena("Me encanta este vino", True, '2020-01-01', 8, vino)
+
+print(resena.esPremium())
+print(resena.getPuntaje())
+print(resena.sosDeEnofilo())
+print(resena.vino.getPrecio())
+print(resena.sosDePeriodo('2019-01-01', '2020-01-01'))
+print(resena.sosDeSommelier()) 

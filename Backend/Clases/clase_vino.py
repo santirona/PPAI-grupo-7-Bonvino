@@ -1,9 +1,10 @@
+from clase_bodega import Bodega
+
 class Vino: 
-    def __init__(self, id, nombre, bodega, region_vitivinicola, provincia, pais, varietales, precio, reseñas):
+    def __init__(self, id, nombre, bodega, provincia, pais, varietales, precio, reseñas):
         self.id = id
         self.nombre = nombre
         self.bodega = bodega
-        self.region_vitivinicola = region_vitivinicola
         self.provincia = provincia
         self.pais = pais
         self.varietales = varietales
@@ -22,7 +23,7 @@ class Vino:
     
     
     def obtener_info(self):
-        return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.region_vitivinicola.nombre}, {self.provincia.nombre}, {self.pais.nombre}, {self.precio}"
+        return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.provincia.nombre}, {self.pais.nombre}, {self.precio}"
     
     def tenes_reseñas_de_tipo_en_periodo(self, tipo, desde, hasta):
         pass
@@ -32,3 +33,8 @@ class Vino:
     
     def getPrecio(self):
         return self.precio
+    
+    """
+    def buscarinfoBodega(self):
+        return (self.bodega.getNombre(self),self.bodega.obtenerRegionYPais(self))
+    """

@@ -1,11 +1,14 @@
+from clase_region_vitivinicola import regionVitivinicola
+
 class Bodega: 
-    def __init__(self, coordenadaUbicacion, descripcion, fechaUltimaActualizacion, historia, nombre, periodoActualizacion):
+    def __init__(self, coordenadaUbicacion, descripcion, fechaUltimaActualizacion, historia, nombre, periodoActualizacion, region_vitivinicola):
         self.coordenadaUbicacion = coordenadaUbicacion
         self.descripcion = descripcion
         self.fechaUltimaActualizacion = fechaUltimaActualizacion
         self.historia = historia
         self.nombre = nombre
         self.periodoActualizacion = periodoActualizacion
+        self.regionVitivinicola = regionVitivinicola.RegionVitivinicola(region_vitivinicola)
 
     def actualizarDatosVinos():
         pass
@@ -25,5 +28,5 @@ class Bodega:
     def mostrarTodosLosVinos():
         pass
 
-    def obtenerRegionYPais():
-        pass
+    def obtenerRegionYPais(self):
+        return(self.regionVitivinicola.__getNombre__(self),self.regionVitivinicola.obtenerPais(self))
