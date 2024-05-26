@@ -19,8 +19,8 @@ class Bodega:
     def estaParaActualizarNovedadesVino():
         pass
 
-    def getNombre():
-        pass
+    def getNombre(self):
+        return self.nombre
 
     def mostrarTodosLosVinos():
         pass
