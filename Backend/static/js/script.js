@@ -22,10 +22,23 @@ function boton4() {
     alert("Funcionalidad del botón 4");
 }
 
+//valida la fecha
+function validarFecha(fechaDesde, fechaHasta){
+    if(fechaDesde > fechaHasta){
+        alert("La fecha desde no puede ser mayor que la fecha hasta");
+        return true;
+    } else {
+        return false;}
+}
+
 function botonBuscar() {
     // Obtiene los valores de los elementos 'fechaDesde' y 'fechaHasta' del documento HTML
     var fechaDesde = document.getElementById("fechaDesde").value;
     var fechaHasta = document.getElementById("fechaHasta").value;
+
+    if(validarFecha(fechaDesde, fechaHasta)){
+        return;
+    };
 
     // Obtiene el elemento 'tipoResena' del documento HTML
     var tipoResenaElement = document.getElementById("tipoReseña");
@@ -41,7 +54,7 @@ function botonBuscar() {
 
     // Crea una nueva solicitud AJAX
     var xhr = new XMLHttpRequest();
-    // Abre una conexión POST hacia la ruta '/ranking' en modo asíncrono
+    // Abre una conexión POST hacia la ruta '/ranking' en modo asíncrono}
     xhr.open("POST", "/ranking", true);
     // Configura la cabecera 'Content-Type' de la solicitud
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -72,3 +85,4 @@ function botonBuscar() {
     // Envía la solicitud AJAX con los parámetros construidos
     xhr.send(params);
 }
+
