@@ -69,7 +69,7 @@ def ranking():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
+```
 
 #### funcionalidad javascript importante
 
@@ -96,6 +96,7 @@ function botonBuscar() {
     var params = `fechaDesde=${fechaDesde}&fechaHasta=${fechaHasta}&tipo_resena=${tipo_resena}&forma_visualizacion=${forma_visualizacion}&tipo_resena_texto=${encodeURIComponent(tipo_resena)}&forma_visualizacion_texto=${encodeURIComponent(forma_visualizacion)}`;
     xhr.send(params);
 }
+```
 
 ## Explicación del Código
 
@@ -125,3 +126,7 @@ Para entender mejor el código y las tecnologías utilizadas, se recomienda cons
 4. [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 5. [AJAX - MDN Web Docs](https://developer.mozilla.org/es/docs/Web/Guide/AJAX)
 6. [XMLHttpRequest - MDN Web Docs](https://developer.mozilla.org/es/docs/Web/API/XMLHttpRequest)
+
+
+## Disclaimer IMPORTANTE!!
+Leer de entornos virtuales va ayudar a entender el uso del framework Flask      
