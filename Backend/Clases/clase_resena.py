@@ -9,17 +9,19 @@ class Resena:
         self.vino = vino
 
     def esPremium(self):
+        # Devuelve True si la reseña es premium, False en caso contrario.
         return self.es_premium
 
     def getPuntaje(self):
+        # Devuelve el puntaje de la reseña.
         return self.puntaje
     
     def sosDeEnofilo(self):
-        # Devuelve True si la reseña no es premium ni de sommelier
+        # Devuelve True si la reseña no es premium ni de sommelier, False en caso contrario.
         return not (self.es_premium or self.sosDeSommelier())
 
     def sosDePeriodo(self, fecha_desde, fecha_hasta):
-        # Devuelve True si la fecha de la reseña pertenece o no a un periodo de fechas
+        # Devuelve True si la fecha de la reseña pertenece a un periodo de fechas, False en caso contrario.
         return (self.fecha_resena is not None and
                 fecha_desde is not None and
                 fecha_hasta is not None and
@@ -27,24 +29,17 @@ class Resena:
                 self.fecha_resena <= fecha_hasta)
 
     def sosDeSommelier(self):
-        # Devuelve Solo si la reseña es premium y tiene fecha de resena
+        # Devuelve True si la reseña es premium y tiene fecha de reseña, False en caso contrario.
         return self.es_premium and self.fecha_resena is not None
-    
+
 
 """
-    Pruebas sin Vino funciona bien
-    prueba_resena = Resena('Me encanta este vino', False, '2020-01-01', 8)
-    print(prueba_resena.sosDeEnofilo()) # True
-    print(prueba_resena.sosDeSommelier()) # False
-    print(prueba_resena.sosDePeriodo('2019-01-01', '2020-01-01')) 
-"""
-
 vino = Vino(1, "Gran Reserva", "Bodega XYZ", "Mendoza", "Mendoza", "Argentina",  25.50, None)
 resena = Resena("Me encanta este vino", True, '2020-01-01', 8, vino)
-
 print(resena.esPremium())
 print(resena.getPuntaje())
 print(resena.sosDeEnofilo())
 print(resena.vino.getPrecio())
 print(resena.sosDePeriodo('2019-01-01', '2020-01-01'))
 print(resena.sosDeSommelier()) 
+"""
