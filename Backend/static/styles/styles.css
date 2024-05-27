@@ -15,12 +15,6 @@ body {
     position: relative;
 }
 
-@keyframes moveBackground {
-    0% { transform: translateX(0); }
-    50% { transform: translateX(-25%); }
-    100% { transform: translateX(0); }
-}
-
 body::before {
     content: "";
     position: absolute;
@@ -28,14 +22,9 @@ body::before {
     left: 0;
     width: 200%;
     height: 200%;
-    background-image: url('../images/fondo_principal.png'), url('../images/fondo_principal.png'), 
-                      url('../images/fondo_principal.png'), url('../images/fondo_principal.png');
+    background-image: url('../images/img1.png');
     background-size: auto;
-    background-repeat: repeat;
-    background-position: 0 0, 50% 0, 0 50%, 50% 50%;
     filter: blur(5px);
-    z-index: -1;
-    animation: moveBackground 30s linear infinite;
 }
 
 /* Mantener todos los otros estilos */
