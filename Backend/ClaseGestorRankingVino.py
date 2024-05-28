@@ -14,8 +14,6 @@ def ranking():
             fecha_hasta = request.form['fechaHasta']  # Obtiene el valor del campo 'fechaHasta' del formulario
             tipo_resena_texto = request.form['tipo_resena_texto']  # Obtiene el valor del campo 'tipo_resena_texto' del formulario
             forma_visualizacion_texto = request.form['forma_visualizacion_texto']  # Obtiene el valor del campo 'forma_visualizacion_texto' del formulario
-            
-            #logica
 
             # Procesar los datos obtenidos del formulario
             print(f"Datos del formulario:\n  Fecha desde: {fecha_desde}\n  Fecha hasta: {fecha_hasta}\n  Tipo reseña: {tipo_resena_texto}\n  Forma visualización: {forma_visualizacion_texto}")
