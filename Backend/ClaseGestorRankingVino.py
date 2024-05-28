@@ -51,7 +51,7 @@ class GestorRankingVino:
             if vino.tenesResenaDeTipoEnPeriodo(self.tipoRankingSeleccionado, self.fechaDesde, self.fechaHasta):
                 vinosQueCumplenFiltros.append(vino)
                 
-        return vinosQueCumplenFiltros
+        self.vinosQueCumplenFiltros = vinosQueCumplenFiltros
 
     def calcularPuntajeDeSommelierEnPeriodo(self, vinos):
         for vino in vinos: 
