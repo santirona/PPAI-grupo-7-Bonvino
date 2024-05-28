@@ -41,7 +41,12 @@ class Vino:
                 return(False)
             
     def calcularPuntajePromedio(self): 
-        return sum([resena.getPuntaje() for resena in self.resenas]) / len(self.resenas)
+        promediosVinos = []
+        for resena in self.resenas:
+            suma = sum(resena.getPuntaje())
+            promedio = suma / len(self.resenas)
+            promediosVinos.append(promedio)
+        return promediosVinos
 
     
     """
