@@ -53,9 +53,9 @@ class GestorRankingVino:
                 
         return vinosQueCumplenFiltros
 
-    def calcularPuntajeDeSommelierEnPeriodo(self):
-        # Implement logic to calculate sommelier scores in the period
-        pass
+    def calcularPuntajeDeSommelierEnPeriodo(self, vinos):
+        for vino in vinos: 
+            pass
 
     def finCU(self):
         # Implement logic to finalize the control use case

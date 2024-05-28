@@ -1,4 +1,6 @@
-from Clases.clase_bodega import Bodega
+from clase_bodega import Bodega
+from clase_resena import Resena
+
 
 class Vino: 
     def __init__(self, id, nombre, bodega, provincia, pais, precio):
@@ -37,6 +39,15 @@ class Vino:
                 return(True)
             else:
                 return(False)
+            
+    def calcularPuntajePromedio(self): 
+        promediosVinos = []
+        for resena in self.resenas:
+            suma = sum(resena.getPuntaje())
+            promedio = suma / len(self.resenas)
+            promediosVinos.append(promedio)
+        return promediosVinos
+
     
     """
     def buscarinfoBodega(self):
