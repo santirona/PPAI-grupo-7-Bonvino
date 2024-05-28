@@ -65,9 +65,9 @@ class GestorRankingVino:
         # Implement logic to generate wine ranking options
         pass
 
-    def ordenarVinos(self):
-        # Implement logic to sort wines
-        pass
+    def ordenarVinosPor(self, vinos):
+        vinos_ordenados = sorted(vinos, key=lambda vino: vino.resena, reverse=True)
+        return vinos_ordenados
 
     def tomarConfirmacionGenReporte(self):
         # Implement logic to take report generation confirmation
