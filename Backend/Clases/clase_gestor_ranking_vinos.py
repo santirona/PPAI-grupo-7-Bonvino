@@ -31,12 +31,10 @@ class GestorRankingVinos:
         pass
 
     def tomarSelFechaDesdeYHasta(self, fechaDesde, fechaHasta):
-        # Implement logic to set the start and end dates
         self.fechaDesde = fechaDesde
         self.fechaHasta = fechaHasta
 
     def tomarSelTipoResena(self, tipoResena):
-        # Implement logic to set the type of review
         self.tipoRankingSeleccionado = tipoResena
 
     def tomarSelTipoVisualizacion(self, tipoVisualizacion):

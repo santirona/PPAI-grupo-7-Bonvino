@@ -1,16 +1,17 @@
-from clase_pais import Pais
+from Backend.Clases.clase_region_vitivinicola import RegionVitivinicola
 
 class Provincia:
-    def __init__(self, nombre, pais, regionVitivinicola):
+    def __init__(self, nombre):
         self.nombre = nombre
-        self.pais = pais
-        self.regionVitivinicola = regionVitivinicola
+        self.regiones = []
+        self.pais = None
 
     def contarRegiones(self):
-        pass
+        return len(self.regiones)
 
     def mostrarRegiones(self):
-        pass
+        return self.regiones
 
     def obtenerPais(self):
         return self.pais
+

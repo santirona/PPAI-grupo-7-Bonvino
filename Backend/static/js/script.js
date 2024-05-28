@@ -23,7 +23,7 @@ function boton4() {
 }
 
 //valida la fecha
-function validarFecha(fechaDesde, fechaHasta){
+function validarPeriodo(fechaDesde, fechaHasta){
     if(fechaDesde > fechaHasta){
         alert("La fecha desde no puede ser mayor que la fecha hasta");
         return true;
@@ -36,7 +36,7 @@ function botonBuscar() {
     var fechaDesde = document.getElementById("fechaDesde").value;
     var fechaHasta = document.getElementById("fechaHasta").value;
 
-    if(validarFecha(fechaDesde, fechaHasta)){
+    if(validarPeriodo(fechaDesde, fechaHasta)){
         return;
     };
 
