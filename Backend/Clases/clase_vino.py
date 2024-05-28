@@ -1,15 +1,15 @@
 from clase_bodega import Bodega
 
 class Vino: 
-    def __init__(self, id, nombre, bodega, provincia, pais, varietales, precio, reseñas):
+    def __init__(self, id, nombre, bodega, provincia, pais, precio):
         self.id = id
         self.nombre = nombre
         self.bodega = bodega
         self.provincia = provincia
         self.pais = pais
-        self.varietales = varietales
+        self.varietales = []
         self.precio = precio
-        self.reseñas = reseñas
+        self.resenas = []
     
     def getVarietales(self):
         return [varietal.getDescripcion() for varietal in self.varietales]
@@ -25,16 +25,22 @@ class Vino:
     def obtener_info(self):
         return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.provincia.nombre}, {self.pais.nombre}, {self.precio}"
     
-    def tenes_reseñas_de_tipo_en_periodo(self, tipo, desde, hasta):
-        pass
-    
     def getNombre(self):
         return self.nombre
     
     def getPrecio(self):
         return self.precio
     
+    def tenesResenaDeTipoEnPeriodo(self, tipo, desde, hasta):
+        for resena in self.resenas:
+            if (resena.sosDePeriodo(desde, hasta) and resena.sosDeSommelier(tipo)):
+                return(True)
+            else:
+                return(False)
+    
     """
     def buscarinfoBodega(self):
         return (self.bodega.getNombre(self),self.bodega.obtenerRegionYPais(self))
     """
+    
+vino1 = Vino(1, "Gran Reserva", "Bodega XYZ", "Mendoza", "Mendoza",[], 25.50,[])
