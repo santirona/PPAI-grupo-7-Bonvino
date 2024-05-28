@@ -1,0 +1,114 @@
+[33mcommit 85f133ace97127f8518c4ab59dbce6ebc1769dc1[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: fededlV <fededelavega2@gmail.com>
+Date:   Sun May 26 15:50:57 2024 -0300
+
+    Creacion de funciones de pais, region y bodega
+
+[33mcommit e939c4bb86878245fdb0dffc8c1e64fca34c2616[m
+Author: Santiago Orona <95342@sistemas.frc.utn.edu.ar>
+Date:   Sun May 26 15:22:02 2024 -0300
+
+    cambios en clases
+
+[33mcommit 0f85d07939c1e19205f30fa0372da73faedab2a3[m
+Author: Santiago Orona <95342@sistemas.frc.utn.edu.ar>
+Date:   Sun May 26 15:13:44 2024 -0300
+
+    clases vacias creadas
+
+[33mcommit c63cd75efd3665febbcb73b27989717990d40cca[m
+Author: Santiago Orona <95342@sistemas.frc.utn.edu.ar>
+Date:   Sun May 26 15:06:15 2024 -0300
+
+    cambios en las carpetas clases
+
+[33mcommit f65e11a085777f0387978747268f80d8300b81b1[m
+Author: fededlV <fededelavega2@gmail.com>
+Date:   Sun May 26 14:59:11 2024 -0300
+
+    Creacion de carpeta para las clases
+
+[33mcommit 3225b408bf1807aebc6433dbb0612fced7bbea08[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 20:27:53 2024 -0300
+
+    modificacion placeholder
+
+[33mcommit 9e2d1610393fed3d17c08ad631c5423426cf2a9d[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 20:18:45 2024 -0300
+
+    Segunda pagina para pedir datos, y se llega hasta validarFecha
+
+[33mcommit f196bd95a3e6f49c437c47d07dd596b0b5f1a23d[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 18:20:14 2024 -0300
+
+    SegundaPaginaBoton
+
+[33mcommit f83ae4d54539fe5e50c7ba5844621612900affb4[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 16:55:29 2024 -0300
+
+    Version MVP con CSS porfavor dejar de respaldo
+
+[33mcommit 89dd96849544b9593d0a4cebbf73ab390bda101f[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 16:47:02 2024 -0300
+
+    Problema de diseño con imagenes resuelto
+
+[33mcommit 9f5ea53b031a51c6e552326f1d9a3695b5492959[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 10:09:45 2024 -0300
+
+    ImagenFondo
+
+[33mcommit 05769783fd9a96e910d7c2fa412925c03001abb9[m
+Merge: 0a71cbf 13a7817
+Author: fededlV <fededelavega2@gmail.com>
+Date:   Thu May 23 09:49:31 2024 -0300
+
+    Merge branch 'main' of https://github.com/santirona/PPAI-grupo-7-Bonvino
+
+[33mcommit 0a71cbfc5f51588f1e81c0998facee10ec484e81[m
+Author: fededlV <fededelavega2@gmail.com>
+Date:   Thu May 23 09:49:14 2024 -0300
+
+    Separacion de proyecto python
+
+[33mcommit 13a78171b23d46388c6fc9eaf4b5180ddc6d97c4[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 09:48:41 2024 -0300
+
+    DiseñoWeb
+
+[33mcommit 11bb13bb1c77a99551df7c17940c47d837e3462c[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 09:33:05 2024 -0300
+
+    Codigo rutas
+
+[33mcommit ee513bfb1da4cb10ea3af179d24116d4cc3a576c[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 09:27:36 2024 -0300
+
+    Resolucion rutas
+
+[33mcommit 3ef47a6bba49989ea2bf7211cf4855c046eb489e[m
+Author: Mateo <mateo.j.ramallo@gmail.com>
+Date:   Thu May 23 09:17:18 2024 -0300
+
+    add
+
+[33mcommit 2b338946a32df178bcaa1d6d8b40fa3699609295[m
+Author: santirona <113867593+santirona@users.noreply.github.com>
+Date:   Wed May 22 18:27:23 2024 -0300
+
+    subo base proyecto
+
+[33mcommit ef522d2a569c205d5f774daeb960b2e9e2b9c955[m
+Author: santirona <113867593+santirona@users.noreply.github.com>
+Date:   Wed May 22 18:26:29 2024 -0300
+
+    Initial commit
