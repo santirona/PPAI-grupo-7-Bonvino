@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify # type: ignore
+""" from flask import Flask, render_template, request, jsonify # type: ignore
 
 app = Flask(__name__)  # Crea una instancia de la aplicación Flask
 
@@ -28,6 +28,49 @@ def ranking():
             return jsonify({'error': 'Faltan datos del formulario'}), 400  # Devolver una respuesta de error indicando que faltan datos, con código de estado 400 (Bad Request)
 
     return render_template('ranking.html')  # Si la solicitud es de tipo GET, renderiza el template ranking.html
+
+if __name__ == '__main__':
+    app.run(debug=True)  # Inicia el servidor de desarrollo de Flask en modo debug si se ejecuta este archivo directamente """
+
+
+from flask import Flask, render_template, request, jsonify # type: ignore
+
+class GestorRankingVino:
+    def __init__(self, app):
+        self.app = app
+        self.setup_routes()
+
+    def setup_routes(self):
+        @self.app.route('/')
+        def index():
+            return render_template('index.html')
+
+        @self.app.route('/ranking', methods=['GET', 'POST'])
+        def ranking():
+            if request.method == 'POST':
+                try:
+                    fecha_desde = request.form['fechaDesde']
+                    fecha_hasta = request.form['fechaHasta']
+                    tipo_resena_texto = request.form['tipo_resena_texto']
+                    forma_visualizacion_texto = request.form['forma_visualizacion_texto']
+
+                    # Procesar los datos obtenidos del formulario
+                    print(f"Datos del formulario:\n  Fecha desde: {fecha_desde}\n  Fecha hasta: {fecha_hasta}\n  Tipo reseña: {tipo_resena_texto}\n  Forma visualización: {forma_visualizacion_texto}")
+
+                    # Devolver una respuesta JSON indicando que los datos del formulario fueron recibidos correctamente
+                    return jsonify({'message': 'Datos del formulario recibidos correctamente!'})
+                except KeyError as e:
+                    # Manejar el caso de que falte algún campo en el formulario
+                    print(f"Error: Falta el campo del formulario '{e.args[0]}'")
+                    return jsonify({'error': 'Faltan datos del formulario'}), 400  # Devolver una respuesta de error indicando que faltan datos, con código de estado 400 (Bad Request)
+
+            return render_template('ranking.html')
+
+# Crear la instancia de Flask
+app = Flask(__name__)
+
+# Crear la instancia de GestorRankingVino y pasarle la aplicación Flask
+gestor = GestorRankingVino(app)
 
 if __name__ == '__main__':
     app.run(debug=True)  # Inicia el servidor de desarrollo de Flask en modo debug si se ejecuta este archivo directamente
