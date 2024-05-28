@@ -1,6 +1,7 @@
 from clase_bodega import Bodega
 from clase_resena import Resena
 
+
 class Vino: 
     def __init__(self, id, nombre, bodega, provincia, pais, precio):
         self.id = id
@@ -47,5 +48,3 @@ class Vino:
     def buscarinfoBodega(self):
         return (self.bodega.getNombre(self),self.bodega.obtenerRegionYPais(self))
     """
-    
-vino1 = Vino(1, "Gran Reserva", "Bodega XYZ", "Mendoza", "Mendoza",[], 25.50,[])
