@@ -29,7 +29,7 @@ def ranking():
 
 if __name__ == '__main__':
     app.run(debug=True)  # Inicia el servidor de desarrollo de Flask en modo debug si se ejecuta este archivo directamente """
-
+from vinosMemori import vinos
 from Clases.clase_vino import Vino
 from flask import Flask, render_template, request, jsonify # type: ignore
 import json
