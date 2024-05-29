@@ -6,6 +6,9 @@ class Resena:
         self.puntaje = puntaje
         self.vino = vino
 
+    def getComentario(self):
+        return self.comentario
+    
     def esPremium(self):
         # Devuelve True si la reseña es premium, False en caso contrario.
         return self.es_premium

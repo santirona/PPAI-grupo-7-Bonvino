@@ -1,9 +1,9 @@
 class RegionVitivinicola:
-    def __init__(self, nombre, descripcion):
+    def __init__(self, nombre, descripcion, provincia):
         self.nombre = nombre
         self.descripcion = descripcion
         self.bodegas = []
-        self.provincias = []
+        self.provincia = provincia 
 
     def contarBodegas(self):
         return len(self.bodegas)

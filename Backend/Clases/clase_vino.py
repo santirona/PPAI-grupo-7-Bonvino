@@ -1,15 +1,16 @@
 from clase_bodega import Bodega
 from clase_resena import Resena
 class Vino: 
-    def __init__(self, id, nombre, bodega, provincia, pais, precio):
-        self.id = id
+    def __init__(self, anada, fecha_actualizacion, imagen_etiqueta, nombre, nota_de_cata_bodega, precio_ARS, bodega, varietales):
+        self.anada = anada
         self.nombre = nombre
         self.bodega = bodega
-        self.provincia = provincia
-        self.pais = pais
-        self.varietales = []
-        self.precio = precio
+        self.varietales = varietales
+        self.precio_ARS = precio_ARS
         self.resenas = []
+        self.imagen_etiqueta = imagen_etiqueta
+        self.nota_de_cata_bodega = nota_de_cata_bodega
+        self.fecha_actualizacion = fecha_actualizacion
         self.puntuacionPromedio = None
     
     def getVarietales(self):
@@ -22,7 +23,9 @@ class Vino:
         vino = Vino(1, "Gran Reserva", "Bodega XYZ", "Mendoza", "Mendoza", "Argentina", [varietal1, varietal2], 25.50)
     ###
     
-    
+    def getResenas(self):
+        return [resena.getComentario() for resena in self.resenas]
+
     def obtener_info(self):
         return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.provincia.nombre}, {self.pais.nombre}, {self.precio}"
     
@@ -61,7 +64,10 @@ class Vino:
             self.puntuacionPromedio = round((suma / count), 2)
         return self.puntuacionPromedio
         
-    
+    def agregarResenas(self, resena):
+        self.resenas.append(resena)
+
+
     """
     def buscarinfoBodega(self):
         return (self.bodega.getNombre(self),self.bodega.obtenerRegionYPais(self))
