@@ -56,8 +56,13 @@ class GestorRankingVino:
         self.vinosQueCumplenFiltros = vinosQueCumplenFiltros
 
     def calcularPuntajeDeSommelierEnPeriodo(self, vinos):
+        promedio = []
         for vino in vinos: 
-            pass
+            puntaje = vino.calcularPuntajeDeSommelierEnPeriodo(self.fechaDesde, self.fechaHasta)
+            for prom in puntaje:
+                promedio.append(vino.calcularPuntajePromedio(prom))
+        return promedio
+        
 
     def finCU(self):
         # Implement logic to finalize the control use case
@@ -88,11 +93,11 @@ class GestorRankingVino:
 
     def setup_routes(self):
         @self.app.route('/')
-        def index():
+        def index_page():
             return render_template('index.html')
 
         @self.app.route('/ranking', methods=['GET', 'POST'])
-        def ranking():
+        def ranking_page():
             if request.method == 'POST':
                 try:
                     fecha_desde = request.form['fechaDesde']
