@@ -14,9 +14,8 @@ class Varietal:
 
     def mostrarPorcentaje(self):
         return self.porcentaje_composicion
+    
+    def __str__(self):
+        return f"Descripcion Varietal: {self.descripcion}, \nPorcentaje Composicion: {self.porcentaje_composicion}"
 
-# # Example usage
-# varietal = Varietal.new("Cabernet Sauvignon", 85)
-# print(varietal.getDescripcion())  # Output: Cabernet Sauvignon
-# print(varietal.mostrarPorcentaje())  # Output: 85
-# print(varietal.esDeTipoUva("Cabernet"))  # Output: True
+
