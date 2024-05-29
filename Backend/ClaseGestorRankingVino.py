@@ -29,6 +29,7 @@ def ranking():
 
 if __name__ == '__main__':
     app.run(debug=True)  # Inicia el servidor de desarrollo de Flask en modo debug si se ejecuta este archivo directamente """
+
 from vinosMemori import get_vinos
 from Clases.clase_vino import Vino
 from flask import Flask, render_template, request, jsonify # type: ignore
@@ -58,7 +59,9 @@ class GestorRankingVino:
         for vino in self.vinosQueCumplenFiltros: 
             vino.calcularPuntajeDeSommelierEnPeriodo(self.fechaDesde, self.fechaHasta)
             
-        
+    def calcularPuntajeDeNormalesEnPeriodo(self):
+        for vino in self.vinosQueCumplenFiltros: 
+            vino.calcularPuntajeDeNormalesEnPeriodo(self.fechaDesde, self.fechaHasta)
 
     def finCU(self):
         # Implement logic to finalize the control use case

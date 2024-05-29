@@ -88,7 +88,6 @@ def get_vinos():
         puntaje=9,
         vino=vino2
     )
-
     resena4 = Resena(
         comentario="No me gusta este vino",
         es_premium=False,
@@ -132,7 +131,6 @@ def get_vinos():
         puntaje=8,
         vino=vino3
     )
-
     resena6 = Resena(
         comentario="No me gusta este vino",
         es_premium=False,
@@ -153,5 +151,3 @@ def get_vinos():
     vinos = [vino1, vino2, vino3]
     
     return vinos
-
-vinos = get_vinos()

@@ -1,4 +1,3 @@
-from Clases.clase_resena import Resena
 class Vino: 
     def __init__(self, anada, fecha_actualizacion, imagen_etiqueta, nombre, nota_de_cata_bodega, precio_ARS, bodega, varietales):
         self.anada = anada
@@ -34,6 +33,16 @@ class Vino:
                     return(True)
                 else:
                     return(False)
+                
+        elif tipo == "Normales":
+            for resena in self.resenas:
+                if (resena.sosDePeriodo(desde, hasta)):
+                    return(True)
+                else:
+                    return(False)
+        
+        else: 
+            return(False)
             
     def calcularPuntajeDeSommelierEnPeriodo(self, fecha_desde, fecha_hasta):
         acumulador_puntaje = 0
@@ -44,7 +53,17 @@ class Vino:
                 cantidad_resenas_sommelier += 1
         
         self.calcularPuntajePromedio(acumulador_puntaje,cantidad_resenas_sommelier)
-
+        
+    def calcularPuntajeDeNormalesEnPeriodo(self, fecha_desde, fecha_hasta):
+        acumulador_puntaje = 0
+        cantidad_resenas = 0
+        for resena in self.resenas:
+            if (resena.sosDePeriodo(fecha_desde, fecha_hasta)):
+                acumulador_puntaje += resena.getPuntaje()
+                cantidad_resenas += 1
+        
+        self.calcularPuntajePromedio(acumulador_puntaje,cantidad_resenas)
+        
 
     def calcularPuntajePromedio(self, acumulador, cantidad):
         self.puntuacion_promedio = round((acumulador / cantidad), 2)
