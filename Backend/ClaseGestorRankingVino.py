@@ -98,7 +98,6 @@ class GestorRankingVino:
         @self.app.route('/')
         def index_page():
             return render_template('index.html')
-
         @self.app.route('/ranking', methods=['GET', 'POST'])
         def ranking_page():
             if request.method == 'POST':
@@ -112,8 +111,12 @@ class GestorRankingVino:
                     print(f"Datos del formulario:\n  Fecha desde: {fecha_desde}\n  Fecha hasta: {fecha_hasta}\n  Tipo reseña: {tipo_resena_texto}\n  Forma visualización: {forma_visualizacion_texto}")
 
                     # Devolver una respuesta JSON indicando que los datos del formulario fueron recibidos correctamente
-                    return jsonify({'message': 'Datos del formulario recibidos correctamente!'})
-                
+                    return jsonify({
+                        'message': 'Datos del formulario recibidos correctamente!',
+                        'fecha_desde': fecha_desde,
+                        'fecha_hasta': fecha_hasta
+                    })
+
                 except KeyError as e:
                     # Manejar el caso de que falte algún campo en el formulario
                     print(f"Error: Falta el campo del formulario '{e.args[0]}'")
