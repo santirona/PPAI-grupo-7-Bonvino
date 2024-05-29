@@ -1,4 +1,4 @@
-from Backend.Clases.clase_region_vitivinicola import RegionVitivinicola
+from clase_region_vitivinicola import RegionVitivinicola
 
 class Provincia:
     def __init__(self, nombre):
