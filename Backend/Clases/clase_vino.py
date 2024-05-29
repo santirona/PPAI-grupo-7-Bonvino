@@ -1,5 +1,5 @@
-from clase_bodega import Bodega
-from clase_resena import Resena
+from Clases.clase_bodega import Bodega
+from Clases.clase_resena import Resena
 class Vino: 
     def __init__(self, anada, fecha_actualizacion, imagen_etiqueta, nombre, nota_de_cata_bodega, precio_ARS, bodega, varietales):
         self.anada = anada

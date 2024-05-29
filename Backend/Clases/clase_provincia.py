@@ -1,5 +1,3 @@
-from clase_region_vitivinicola import RegionVitivinicola
-
 class Provincia:
     def __init__(self, nombre,pais):
         self.nombre = nombre

@@ -1,10 +1,10 @@
-from clase_resena import Resena
-from clase_pais import Pais
-from clase_provincia import Provincia
-from clase_bodega import Bodega
-from clase_vino import Vino
-from clase_region_vitivinicola import RegionVitivinicola
-from clase_varietal import Varietal
+from Clases.clase_resena import Resena
+from Clases.clase_pais import Pais
+from Clases.clase_provincia import Provincia
+from Clases.clase_bodega import Bodega
+from Clases.clase_vino import Vino
+from Clases.clase_region_vitivinicola import RegionVitivinicola
+from Clases.clase_varietal import Varietal
 
 vino1 = Vino(
     anada=2020,
