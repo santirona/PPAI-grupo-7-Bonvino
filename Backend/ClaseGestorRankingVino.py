@@ -46,7 +46,6 @@ class GestorRankingVino:
         self.vinosQueCumplenFiltros = []
         
     def buscarVinosConResenasEnPeriodo(self, vinos):
-        
         vinosQueCumplenFiltros = []
         
         for vino in vinos:          
@@ -55,13 +54,10 @@ class GestorRankingVino:
                 
         self.vinosQueCumplenFiltros = vinosQueCumplenFiltros
 
-    def calcularPuntajeDeSommelierEnPeriodo(self, vinos):
-        promedio = []
-        for vino in vinos: 
-            puntaje = vino.calcularPuntajeDeSommelierEnPeriodo(self.fechaDesde, self.fechaHasta)
-            for prom in puntaje:
-                promedio.append(vino.calcularPuntajePromedio(prom))
-        return promedio
+    def calcularPuntajeDeSommelierEnPeriodo(self):
+        for vino in self.vinosQueCumplenFiltros: 
+            vino.calcularPuntajeDeSommelierEnPeriodo(self.fechaDesde, self.fechaHasta)
+            
         
 
     def finCU(self):

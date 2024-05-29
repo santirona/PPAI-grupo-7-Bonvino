@@ -5,6 +5,8 @@ from Clases.clase_bodega import Bodega
 from Clases.clase_vino import Vino
 from Clases.clase_region_vitivinicola import RegionVitivinicola
 from Clases.clase_varietal import Varietal
+from ClaseGestorRankingVino import GestorRankingVino
+from flask import Flask, render_template, request, jsonify # type: ignore
 
 vino1 = Vino(
     anada=2020,
@@ -45,7 +47,7 @@ resena2 = Resena(
     comentario="No me encanta este vino",
     es_premium=True,
     fecha_resena="2020-01-01",
-    puntaje=8,
+    puntaje=2,
     vino=vino1
 )
 
@@ -81,7 +83,7 @@ resena3 = Resena(
     comentario="Me encanta este vino",
     es_premium=True,
     fecha_resena="2020-01-01",
-    puntaje=8,
+    puntaje=9,
     vino=vino2
 )
 
@@ -123,7 +125,7 @@ vino3 = Vino(
 
 resena5 = Resena(
     comentario="Me encanta este vino",
-    es_premium=True,
+    es_premium=False,
     fecha_resena="2020-01-01",
     puntaje=8,
     vino=vino3
@@ -146,8 +148,20 @@ vino2.resenas.append(resena4)
 vino3.resenas.append(resena5)
 vino3.resenas.append(resena6)
 
+vinos = [vino1, vino2, vino3]
 
+# Crear la instancia de Flask
+app = Flask(__name__)
 
-print(vino1.resenas[0].sosDeSommelier())
-print(vino2.getResenas())
-print(vino3.getResenas())
+# Crear la instancia de GestorRankingVino y pasarle la aplicación Flask
+gestor = GestorRankingVino(app)
+gestor.tomarSelTipoResena("Sommelier")
+gestor.tomarSelFechaDesdeYHasta("2020-01-01", "2023-12-31")
+gestor.buscarVinosConResenasEnPeriodo(vinos)
+print(gestor.vinosQueCumplenFiltros)
+#funciona
+
+gestor.calcularPuntajeDeSommelierEnPeriodo()
+
+for vino in gestor.vinosQueCumplenFiltros:
+    print(vino.nombre, vino.puntuacion_promedio)
