@@ -1,5 +1,5 @@
-from clase_bodega import Bodega
-from clase_resena import Resena
+from Clases.clase_bodega import Bodega
+from Clases.clase_resena import Resena
 
 
 class Vino: 

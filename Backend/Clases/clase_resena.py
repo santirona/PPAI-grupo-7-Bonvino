@@ -1,5 +1,3 @@
-from clase_vino import Vino
-
 class Resena:
     def __init__(self, comentario, es_premium, fecha_resena, puntaje, vino):
         self.comentario = comentario

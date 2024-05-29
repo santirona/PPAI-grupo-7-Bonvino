@@ -124,5 +124,7 @@ app = Flask(__name__)
 # Crear la instancia de GestorRankingVino y pasarle la aplicación Flask
 gestor = GestorRankingVino(app)
 
+
+
 if __name__ == '__main__':
     app.run(debug=True)  # Inicia el servidor de desarrollo de Flask en modo debug si se ejecuta este archivo directamente
