@@ -40,11 +40,11 @@ class GestorRankingVino:
 
     def setup_routes(self):
         @self.app.route('/')
-        def index():
+        def index_page():
             return render_template('index.html')
 
         @self.app.route('/ranking', methods=['GET', 'POST'])
-        def ranking():
+        def ranking_page():
             if request.method == 'POST':
                 try:
                     fecha_desde = request.form['fechaDesde']
