@@ -32,6 +32,8 @@ if __name__ == '__main__':
 
 from Clases.clase_vino import Vino
 from flask import Flask, render_template, request, jsonify # type: ignore
+import json
+import os
 
 class GestorRankingVino:
     def __init__(self, app):
