@@ -27,14 +27,14 @@ class Vino:
         return self.precio
     
     def tenesResenaDeTipoEnPeriodo(self, tipo, desde, hasta):
-        if tipo == "Sommelier":
+        if tipo == "Reseñas de Sommelier":
             for resena in self.resenas:
                 if (resena.sosDePeriodo(desde, hasta) and resena.sosDeSommelier()):
                     return(True)
                 else:
                     return(False)
                 
-        elif tipo == "Normales":
+        elif tipo == "Reseñas Normales":
             for resena in self.resenas:
                 if (resena.sosDePeriodo(desde, hasta)):
                     return(True)

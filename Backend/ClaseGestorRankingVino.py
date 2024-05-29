@@ -9,6 +9,9 @@ class GestorRankingVino:
         self.tipoRankingSeleccionado = None
         self.vinosOrdenados = []
         self.vinosQueCumplenFiltros = []
+        
+    def agregarResena(self, fecha_desde, fecha_hasta, tipo_resena_texto, forma_visualizacion_texto):
+        pass
 
     def buscarVinosConResenasEnPeriodo(self, vinos):
         vinosQueCumplenFiltros = []
@@ -68,14 +71,15 @@ class GestorRankingVino:
         print(self.fechaDesde)
         print(self.fechaHasta)
         print(self.tipoRankingSeleccionado)
-        
         #print(f"Procesado en GestorRankingVino:\n  Fecha desde: {self.fechaDesde}\n  Fecha hasta: {self.fechaHasta}\n  Tipo reseña: {self.tipoRankingSeleccionado}\n  Forma visualización: {forma_visualizacion_texto}")
         vinos = get_vinos()
 
         self.buscarVinosConResenasEnPeriodo(vinos)
-"""         if self.tomarSelTipoResena == "Sommelier":
+                 
+        if self.tipoRankingSeleccionado == "Reseñas de Sommelier":
             self.calcularPuntajeDeSommelierEnPeriodo()
-        elif self.tomarSelTipoResena == "Normales":
+        elif self.tipoRankingSeleccionado == "Reseñas Normales":
             self.calcularPuntajeDeNormalesEnPeriodo()
         else:
-            print("Error: Tipo de visualización no reconocido") """
+            print("Error: Tipo de visualización no reconocido")
+        
