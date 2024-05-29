@@ -42,13 +42,26 @@ class Vino:
                 return(False)
             
     def calcularPuntajeDeSommelierEnPeriodo(self, fecha_desde, fecha_hasta):
-        self.calcularPuntajePromedio(self, fecha_desde, fecha_hasta)
-            
-    def calcularPuntajePromedio(self, fecha_desde, fecha_hasta):
-        puntuaciones = [reseña.getPuntaje() for reseña in self.reseñas
+        resenaEnPeriodo = []
+        for resena in self.resenas:
+            if (resena.sosDePeriodo(fecha_desde, fecha_hasta) and resena.sosDeSommelier()):
+                resenaEnPeriodo.append(resena.getPuntaje())
+        return resenaEnPeriodo
+
+
+    def calcularPuntajePromedio(self, resenaEnPeriodo):
+        """ puntuaciones = [reseña.getPuntaje() for reseña in self.reseñas
                         if reseña.sosDePeriodo(fecha_desde, fecha_hasta) and reseña.sosDeSommelier()]
         if puntuaciones:
-            self.puntuacionPromedio = sum(puntuaciones) / len(puntuaciones)
+            self.puntuacionPromedio = sum(puntuaciones) / len(puntuaciones) """
+        suma = 0
+        count = 0
+        for puntaje in resenaEnPeriodo:
+            suma += [puntaje]
+            count += 1
+        if count > 0:
+            self.puntuacionPromedio = round((suma / count), 2)
+        return self.puntuacionPromedio
         
     
     """
