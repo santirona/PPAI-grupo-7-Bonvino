@@ -60,7 +60,12 @@ class GestorRankingVino:
     
     def ordenarVinos(self):
         self.vinosOrdenados = sorted(self.vinosQueCumplenFiltros, key=lambda vino: vino.puntuacion_promedio, reverse=True)
-    
+
+    #Metodo que crea un excel con los vinos ordenados
+    def crearExcel(self):
+        
+        pass
+
     def procesar_datos_formulario(self, fecha_desde, fecha_hasta, tipo_resena_texto, forma_visualizacion_texto):
         self.tomarSelFechaDesdeYHasta(fecha_desde, fecha_hasta)
         self.tomarSelTipoResena(tipo_resena_texto)
@@ -82,4 +87,11 @@ class GestorRankingVino:
             self.calcularPuntajeDeNormalesEnPeriodo()
         else:
             print("Error: Tipo de visualización no reconocido")
+        
+
+        print("Vinos ordenados:")
+        self.ordenarVinos()
+        for vino in self.vinosOrdenados:
+            print(vino.nombre,'PUNTUACION: ',vino.puntuacion_promedio)
+
         
