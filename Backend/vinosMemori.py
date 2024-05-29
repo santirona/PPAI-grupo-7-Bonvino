@@ -153,7 +153,7 @@ vinos = [vino1, vino2, vino3]
 # Crear la instancia de Flask
 app = Flask(__name__)
 
-# Crear la instancia de GestorRankingVino y pasarle la aplicación Flask
+#test1
 gestor = GestorRankingVino(app)
 gestor.tomarSelTipoResena("Sommelier")
 gestor.tomarSelFechaDesdeYHasta("2020-01-01", "2023-12-31")
@@ -161,7 +161,20 @@ gestor.buscarVinosConResenasEnPeriodo(vinos)
 print(gestor.vinosQueCumplenFiltros)
 #funciona
 
+#test2
 gestor.calcularPuntajeDeSommelierEnPeriodo()
 
+print("\n Mostrar vinos con puntaje promedio: ")
 for vino in gestor.vinosQueCumplenFiltros:
     print(vino.nombre, vino.puntuacion_promedio)
+#funciona
+
+#test3
+gestor.ordenarVinos()
+
+print("\n Ordenar vinos: ")
+for vino in gestor.vinosOrdenados:
+    print(vino.nombre, vino.puntuacion_promedio)
+#funciona
+
+

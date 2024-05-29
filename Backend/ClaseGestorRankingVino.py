@@ -86,6 +86,10 @@ class GestorRankingVino:
     def tomarSelTipoVisualizacion(self, tipoVisualizacion):
         # Implement logic to set the type of visualization
         pass
+    
+    def ordenarVinos(self):
+        self.vinosOrdenados = sorted(self.vinosQueCumplenFiltros, key=lambda vino: vino.puntuacion_promedio, reverse=True)
+        
 
     def setup_routes(self):
         @self.app.route('/')
