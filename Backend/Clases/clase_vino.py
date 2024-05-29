@@ -77,3 +77,6 @@ class Vino:
     def buscarinfoBodega(self):
         return (self.bodega.getNombre(self),self.bodega.obtenerRegionYPais(self))
     """
+    #Crear metodo str que devuelva todo
+    def __str__(self):
+        return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.bodega.provincia.nombre}, {self.bodega.provincia.pais.nombre}, {self.precio_ARS}"

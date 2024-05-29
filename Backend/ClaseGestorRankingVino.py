@@ -10,9 +10,6 @@ class GestorRankingVino:
         self.vinosOrdenados = []
         self.vinosQueCumplenFiltros = []
         
-    def agregarResena(self, fecha_desde, fecha_hasta, tipo_resena_texto, forma_visualizacion_texto):
-        pass
-
     def buscarVinosConResenasEnPeriodo(self, vinos):
         vinosQueCumplenFiltros = []
         for vino in vinos:          
@@ -20,7 +17,7 @@ class GestorRankingVino:
                 vinosQueCumplenFiltros.append(vino)
         self.vinosQueCumplenFiltros = vinosQueCumplenFiltros
         for vino in self.vinosQueCumplenFiltros:
-            print(vino.nombre)
+            print(vino)
 
 
     def calcularPuntajeDeSommelierEnPeriodo(self):
@@ -32,11 +29,9 @@ class GestorRankingVino:
             vino.calcularPuntajeDeNormalesEnPeriodo(self.fechaDesde, self.fechaHasta)
 
     def finCU(self):
-        # Implement logic to finalize the control use case
         pass
 
     def opcionGenerarRankingVinos(self):
-        # Implement logic to generate wine ranking options
         pass
 
     def ordenarVinosPor(self, vinos):
@@ -44,7 +39,6 @@ class GestorRankingVino:
         return vinos_ordenados
 
     def tomarConfirmacionGenReporte(self):
-        # Implement logic to take report generation confirmation
         pass
 
     def tomarSelFechaDesdeYHasta(self, fechaDesde, fechaHasta):
@@ -55,16 +49,11 @@ class GestorRankingVino:
         self.tipoRankingSeleccionado = tipoResena
 
     def tomarSelTipoVisualizacion(self, tipoVisualizacion):
-        # Implement logic to set the type of visualization
         pass
     
     def ordenarVinos(self):
         self.vinosOrdenados = sorted(self.vinosQueCumplenFiltros, key=lambda vino: vino.puntuacion_promedio, reverse=True)
 
-    #Metodo que crea un excel con los vinos ordenados
-    def crearExcel(self):
-        
-        pass
 
     def procesar_datos_formulario(self, fecha_desde, fecha_hasta, tipo_resena_texto, forma_visualizacion_texto):
         self.tomarSelFechaDesdeYHasta(fecha_desde, fecha_hasta)
