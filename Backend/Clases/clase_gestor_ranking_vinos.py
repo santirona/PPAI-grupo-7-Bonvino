@@ -6,9 +6,15 @@ class GestorRankingVinos:
         self.vinosOrdenados = []
         self.vinosQueCumplenFiltros = []
 
-    def buscarVinosConResenasEnPeriodo(self):
-        # Implement logic to search for wines with reviews in the period
-        pass
+    def buscarVinosConResenasEnPeriodo(self, vinos):
+        
+        vinosQueCumplenFiltros = []
+        
+        for vino in vinos:          
+            if vino.tenesResenaDeTipoEnPeriodo(self.tipoRankingSeleccionado, self.fechaDesde, self.fechaHasta):
+                vinosQueCumplenFiltros.append(vino)
+                
+        return vinosQueCumplenFiltros
 
     def calcularPuntajeDeSommelierEnPeriodo(self):
         # Implement logic to calculate sommelier scores in the period

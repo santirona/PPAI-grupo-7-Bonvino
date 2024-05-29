@@ -14,4 +14,3 @@ class Pais:
 
     def getNombre(self):
         return self.nombre
-
