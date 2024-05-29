@@ -4,7 +4,7 @@ from ClaseGestorRankingVino import GestorRankingVino
 class ClaseInterfaz:
     def __init__(self):
         self.app = Flask(__name__)
-        self.gestor_ranking_vino = GestorRankingVino(self.app)
+        self.gestor_ranking_vino = GestorRankingVino()
         self.setup_routes()
 
     def setup_routes(self):
@@ -22,7 +22,10 @@ class ClaseInterfaz:
                     forma_visualizacion_texto = request.form['forma_visualizacion_texto']
 
                     # Procesar los datos obtenidos del formulario
-                    print(f"Datos del formulario:\n  Fecha desde: {fecha_desde}\n  Fecha hasta: {fecha_hasta}\n  Tipo reseña: {tipo_resena_texto}\n  Forma visualización: {forma_visualizacion_texto}")
+                    #print(f"Datos del formulario recibidos en ClaseInterfaz:\n  Fecha desde: {fecha_desde}\n  Fecha hasta: {fecha_hasta}\n  Tipo reseña: {tipo_resena_texto}\n  Forma visualización: {forma_visualizacion_texto}")
+
+                    # Llama al método de GestorRankingVino para procesar los datos
+                    self.gestor_ranking_vino.procesar_datos_formulario(fecha_desde, fecha_hasta, tipo_resena_texto, forma_visualizacion_texto)
 
                     # Devolver una respuesta JSON indicando que los datos del formulario fueron recibidos correctamente
                     return jsonify({'message': 'Datos del formulario recibidos correctamente!'})
@@ -39,4 +42,5 @@ class ClaseInterfaz:
 if __name__ == '__main__':
     interfaz = ClaseInterfaz()
     interfaz.run()
+
     
