@@ -32,6 +32,9 @@ class Resena:
     def sosDeSommelier(self):
         # Devuelve True si la reseña es premium y tiene fecha de reseña, False en caso contrario.
         return self.es_premium and self.fecha_resena is not None
+    
+    def __str__(self):
+        return f"Comentario: {self.comentario}, Es Premium: {self.es_premium}, {self.fecha_resena}, {self.puntaje}, {self.vino}"
 
 
 """

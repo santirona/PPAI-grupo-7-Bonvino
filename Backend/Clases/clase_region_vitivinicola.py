@@ -16,3 +16,6 @@ class RegionVitivinicola:
         if self.provincia:
             return self.provincia.obtenerNombrePais()
         return None
+    
+    def __str__(self):
+        return f"Nombre Region: {self.nombre}, \nDescripcion region: {self.descripcion}, {self.provincia}"
