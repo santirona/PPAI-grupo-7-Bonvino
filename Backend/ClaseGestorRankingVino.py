@@ -35,7 +35,7 @@ class GestorRankingVino:
 
     def calcularPuntajeDeSommelierEnPeriodo(self):
         for vino_data in self.vinosQueCumplenFiltros:
-            vino = vino_data['vino']
+            vino = vino_data['vino'] # 'vino' es la referencia al objeto vino
             puntuacion = vino.calcularPuntajeDeSommelierEnPeriodo(self.fechaDesde, self.fechaHasta)
             if puntuacion is not None:  # Verificar si el puntaje es válido
                 vino_data['puntuacion_promedio'] = puntuacion
@@ -43,7 +43,7 @@ class GestorRankingVino:
     
     def calcularPuntajeDeNormalesEnPeriodo(self):
         for vino_data in self.vinosQueCumplenFiltros:
-            vino = vino_data['vino']
+            vino = vino_data['vino'] # 'vino' es la referencia al objeto vino
             puntuacion= vino.calcularPuntajeDeNormalesEnPeriodo(self.fechaDesde, self.fechaHasta)
             if puntuacion is not None:  # Verificar si el puntaje es válido
                 vino_data['puntuacion_promedio'] = puntuacion
