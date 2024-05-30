@@ -1,6 +1,5 @@
 from vinosMemori import get_vinos
 
-
 class GestorRankingVino:
     def __init__(self):
         self.fechaDesde = None
@@ -48,6 +47,8 @@ class GestorRankingVino:
             if puntuacion is not None:  # Verificar si el puntaje es válido
                 vino_data['puntuacion_promedio'] = puntuacion
 
+    def exportarExcel(self):
+        pass
             
 
     def finCU(self):

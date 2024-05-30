@@ -86,3 +86,12 @@ function botonBuscar() {
     xhr.send(params);
 }
 
+
+function botonFinCU(){
+    // Muestra una alerta al usuario
+    alert("Funcionalidad del botón Fin de CU");
+    document.getElementById("fechaDesde").value = "";
+    document.getElementById("fechaHasta").value = "";
+    document.getElementById("tipoReseña").value = "";
+    document.getElementById("formaVisualizacion").value = "";
+}
