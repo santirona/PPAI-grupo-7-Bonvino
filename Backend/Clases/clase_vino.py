@@ -53,7 +53,7 @@ class Vino:
             if (resena.sosDePeriodo(fecha_desde, fecha_hasta) and resena.sosDeSommelier()):
                 acumulador_puntaje += resena.getPuntaje()
                 cantidad_resenas_sommelier += 1        
-        self.calcularPuntajePromedio(acumulador_puntaje,cantidad_resenas_sommelier)
+        return self.calcularPuntajePromedio(acumulador_puntaje,cantidad_resenas_sommelier)
         
     def calcularPuntajeDeNormalesEnPeriodo(self, fecha_desde, fecha_hasta):
         acumulador_puntaje = 0
