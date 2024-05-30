@@ -61,11 +61,12 @@ class GestorRankingVino:
         self.tomarSelTipoVisualizacion(forma_visualizacion_texto)
 
 
-        print("Procesado en GestorRankingVino:")
-        print(self.fechaDesde)
-        print(self.fechaHasta)
-        print(self.tipoRankingSeleccionado)
-        #print(f"Procesado en GestorRankingVino:\n  Fecha desde: {self.fechaDesde}\n  Fecha hasta: {self.fechaHasta}\n  Tipo reseña: {self.tipoRankingSeleccionado}\n  Forma visualización: {forma_visualizacion_texto}")
+        #print("Procesado en GestorRankingVino:")
+        #print(self.fechaDesde)
+        #print(self.fechaHasta)
+        #print(self.tipoRankingSeleccionado)
+        print(f"Procesado en GestorRankingVino:\n  Fecha desde: {self.fechaDesde}\n  Fecha hasta: {self.fechaHasta}\n  Tipo reseña: {self.tipoRankingSeleccionado}\n  Forma visualización: {forma_visualizacion_texto}")
+        
         vinos = get_vinos()
 
         self.buscarVinosConResenasEnPeriodo(vinos)
