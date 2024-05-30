@@ -10,18 +10,19 @@ class GestorRankingVino:
         self.vinosQueCumplenFiltros = []
         self.VinosQueCumplenDatos = []
 
-    def buscarVinosConResenasEnPeriodo(self, vinos):
-        vinosQueCumplenFiltros = []
+    def buscarVinosConResenasEnPeriodo(self, vinos): # Función para buscar vinos con reseñas dentro de un período de tiempo determinado
+        vinosQueCumplenFiltros = []  # Lista para almacenar vinos que cumplen los filtros
         for vino in vinos:
             if vino.tenesResenaDeTipoEnPeriodo(self.tipoRankingSeleccionado, self.fechaDesde, self.fechaHasta):
-                nombre = vino.getNombre()
+                nombre = vino.getNombre()  # Extraer información relevante del vino y almacenar en un diccionario
                 precio = vino.getPrecio()
-                regionVitivinicola, nombrePais = vino.bodega.obtenerRegionYPais()
+                bodega,nombrePais,regionVitivinicola = vino.buscarinfoBodega()
                 varietal = vino.buscarVarietales()
                 vino_data = {
                     'vino': vino,  # Almacena la referencia al objeto vino
                     'nombre': nombre,
                     'precio': precio,
+                    'bodega': bodega,
                     'regionVitivinicola': regionVitivinicola,
                     'nombrePais': nombrePais,
                     'varietal': varietal,
@@ -36,7 +37,7 @@ class GestorRankingVino:
         for vino_data in self.vinosQueCumplenFiltros:
             vino = vino_data['vino']
             puntuacion = vino.calcularPuntajeDeSommelierEnPeriodo(self.fechaDesde, self.fechaHasta)
-            if puntuacion is not None:  # Check if the score is valid
+            if puntuacion is not None:  # Verificar si el puntaje es válido
                 vino_data['puntuacion_promedio'] = puntuacion
 
     
@@ -44,7 +45,7 @@ class GestorRankingVino:
         for vino_data in self.vinosQueCumplenFiltros:
             vino = vino_data['vino']
             puntuacion= vino.calcularPuntajeDeNormalesEnPeriodo(self.fechaDesde, self.fechaHasta)
-            if puntuacion is not None:  # Check if the score is valid
+            if puntuacion is not None:  # Verificar si el puntaje es válido
                 vino_data['puntuacion_promedio'] = puntuacion
 
             
@@ -104,6 +105,7 @@ class GestorRankingVino:
             self.calcularPuntajeDeNormalesEnPeriodo()
         else:
             print("Error: Tipo de visualización no reconocido")
+
 
         print()
         print("Vinos ordenados:")

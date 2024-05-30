@@ -78,7 +78,8 @@ class Vino:
 
 
     def buscarinfoBodega(self):
-        return (self.bodega.getNombre(self),self.bodega.obtenerRegionYPais(self))
+        pais ,region=self.bodega.obtenerRegionYPais()
+        return (self.bodega.getNombre(),region, pais)
 
     #Funcion para mostrar datos de los vinos. 
     def __str__(self):
