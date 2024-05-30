@@ -13,3 +13,6 @@ class Provincia:
     def obtenerPais(self):
         return self.pais
 
+    def __str__(self):
+        return f"\nNombre Provincia: {self.nombre}"#, Pais de Provincia= {self.pais}"
+

@@ -18,7 +18,7 @@ class Vino:
         return [resena.getComentario() for resena in self.resenas]
 
     def obtener_info(self):
-        return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.provincia.nombre}, {self.pais.nombre}, {self.precio}"
+        return f"{self.nombre}, {self.varietal}, {self.bodega.nombre}, {self.provincia.nombre}, {self.pais.nombre}, {self.precio}"
     
     def getNombre(self):
         return self.nombre
@@ -77,6 +77,10 @@ class Vino:
     def buscarinfoBodega(self):
         return (self.bodega.getNombre(self),self.bodega.obtenerRegionYPais(self))
     """
-    #Crear metodo str que devuelva todo
+    #Funcion para mostrar datos de los vinos. 
     def __str__(self):
-        return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.bodega.region}, {self.bodega.provincia.pais.nombre}, {self.precio_ARS}"
+        #return f"\nNombre de Vino: {self.nombre}, \nVarietal: {self.varietales}, \nBodega: {self.bodega.nombre},  \n{self.bodega.region_vitivinicola}, {self.bodega.region_vitivinicola.provincia.pais}, \nPrecio: {self.precio_ARS}" 
+        
+        #Esta opcion es mejor, ya q muestra todos los datos de los vinos posta, pero es media raringa.
+        atributos = "\n".join(f"{key.capitalize():<10}: {value}" for key, value in self.__dict__.items())
+        return f"{self.__class__.__name__}:\n{atributos}" 

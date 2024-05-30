@@ -28,5 +28,8 @@ class Bodega:
     def mostrarTodosLosVinos():
         pass
 
+    def __str__(self):
+        return f"{self.nombre}, \nDescripcion Bodega: {self.descripcion}, \nHistoria Bodega: {self.historia}, \nFecha Ultima Actualizacion: {self.fechaUltimaActualizacion}, \nPeriodo Actualizacion: {self.periodoActualizacion}, {self.region_vitivinicola}, \nCoordenadas Ubicacion: {self.coordenadasUbicacion}"
+
     """ def obtenerRegionYPais(self):
         return(self.regionVitivinicola.__getNombre__(self),self.regionVitivinicola.obtenerPais(self)) """
