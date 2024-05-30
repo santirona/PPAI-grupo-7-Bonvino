@@ -1,5 +1,3 @@
-from Clases.clase_provincia import Provincia
-from Clases.clase_region_vitivinicola import RegionVitivinicola
 
 class Pais:
     def __init__(self, nombre):

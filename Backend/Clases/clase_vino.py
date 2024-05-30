@@ -11,7 +11,7 @@ class Vino:
         self.fecha_actualizacion = fecha_actualizacion
         self.puntuacion_promedio = None
     
-    def getVarietales(self):
+    def buscarVarietales(self):
         return [varietal.getDescripcion() for varietal in self.varietales]
     
     def getResenas(self):
@@ -24,7 +24,7 @@ class Vino:
         return self.nombre
     
     def getPrecio(self):
-        return self.precio
+        return self.precio_ARS
     
     def tenesResenaDeTipoEnPeriodo(self, tipo, desde, hasta):
         if tipo == "Reseñas de Sommelier":
@@ -44,39 +44,39 @@ class Vino:
         else: 
             return(False)
             
+
+    
     def calcularPuntajeDeSommelierEnPeriodo(self, fecha_desde, fecha_hasta):
         acumulador_puntaje = 0
         cantidad_resenas_sommelier = 0
         for resena in self.resenas:
             if (resena.sosDePeriodo(fecha_desde, fecha_hasta) and resena.sosDeSommelier()):
                 acumulador_puntaje += resena.getPuntaje()
-                cantidad_resenas_sommelier += 1
-        
+                cantidad_resenas_sommelier += 1        
         self.calcularPuntajePromedio(acumulador_puntaje,cantidad_resenas_sommelier)
         
     def calcularPuntajeDeNormalesEnPeriodo(self, fecha_desde, fecha_hasta):
         acumulador_puntaje = 0
         cantidad_resenas = 0
+
         for resena in self.resenas:
             if (resena.sosDePeriodo(fecha_desde, fecha_hasta)):
                 acumulador_puntaje += resena.getPuntaje()
                 cantidad_resenas += 1
         
-        self.calcularPuntajePromedio(acumulador_puntaje,cantidad_resenas)
+        return self.calcularPuntajePromedio(acumulador_puntaje,cantidad_resenas)
         
 
     def calcularPuntajePromedio(self, acumulador, cantidad):
         self.puntuacion_promedio = round((acumulador / cantidad), 2)
+        return self.puntuacion_promedio
 
         
     def agregarResenas(self, resena):
         self.resenas.append(resena)
 
 
-    """
+
     def buscarinfoBodega(self):
         return (self.bodega.getNombre(self),self.bodega.obtenerRegionYPais(self))
-    """
-    #Crear metodo str que devuelva todo
-    def __str__(self):
-        return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.bodega.provincia.nombre}, {self.bodega.provincia.pais.nombre}, {self.precio_ARS}"
+

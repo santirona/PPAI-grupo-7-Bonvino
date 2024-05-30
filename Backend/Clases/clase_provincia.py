@@ -10,6 +10,6 @@ class Provincia:
     def mostrarRegiones(self):
         return self.regiones
 
-    def obtenerPais(self):
-        return self.pais
+    def obtenerNombrePais(self):
+        return self.pais.getNombre()
 

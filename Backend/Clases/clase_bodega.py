@@ -1,4 +1,4 @@
-""" from clase_region_vitivinicola import RegionVitivinicola """
+
 
 class Bodega:
     def __init__(self, nombre, descripcion, historia, fechaUltimaActualizacion, periodoActualizacion, region_vitivinicola, coordenadasUbicacion):
@@ -28,5 +28,5 @@ class Bodega:
     def mostrarTodosLosVinos():
         pass
 
-    """ def obtenerRegionYPais(self):
-        return(self.regionVitivinicola.__getNombre__(self),self.regionVitivinicola.obtenerPais(self)) """
+    def obtenerRegionYPais(self):
+        return(self.region_vitivinicola.getNombre(),self.region_vitivinicola.obtenerPais())

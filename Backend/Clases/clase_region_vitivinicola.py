@@ -1,3 +1,4 @@
+
 class RegionVitivinicola:
     def __init__(self, nombre, descripcion, provincia):
         self.nombre = nombre
@@ -12,6 +13,6 @@ class RegionVitivinicola:
         return self.nombre
 
     def obtenerPais(self):
-        if self.provincias:
-            return self.provincias[0].obtenerPais()
+        if self.provincia:
+            return self.provincia.obtenerNombrePais()
         return None
