@@ -79,4 +79,4 @@ class Vino:
     """
     #Crear metodo str que devuelva todo
     def __str__(self):
-        return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.bodega.provincia.nombre}, {self.bodega.provincia.pais.nombre}, {self.precio_ARS}"
+        return f"{self.nombre}, {self.varietales}, {self.bodega.nombre}, {self.bodega.region}, {self.bodega.provincia.pais.nombre}, {self.precio_ARS}"
