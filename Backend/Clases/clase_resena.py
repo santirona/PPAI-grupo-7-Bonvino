@@ -35,15 +35,3 @@ class Resena:
     
     def __str__(self):
         return f"Comentario: {self.comentario}, Es Premium: {self.es_premium}, {self.fecha_resena}, {self.puntaje}, {self.vino}"
-
-
-"""
-vino = Vino(1, "Gran Reserva", "Bodega XYZ", "Mendoza", "Mendoza", "Argentina",  25.50, None)
-resena = Resena("Me encanta este vino", True, '2020-01-01', 8, vino)
-print(resena.esPremium())
-print(resena.getPuntaje())
-print(resena.sosDeEnofilo())
-print(resena.vino.getPrecio())
-print(resena.sosDePeriodo('2019-01-01', '2020-01-01'))
-print(resena.sosDeSommelier()) 
-"""

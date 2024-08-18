@@ -1,260 +1,142 @@
 {
   "vinos": [
-    {
-      "añada": 2020,
-      "fechaActualizacion": "2024-05-01",
-      "imagenEtiqueta": "imagen1.jpg",
-      "nombre": "Vino Ejemplo 1",
-      "notaDeCataBodega": "Aromas frutales con notas a madera",
-      "precioARS": 1500,
-      "bodega": {
-        "coordenadasUbicacion": "34.6037,-58.3816",
-        "descripcion": "Una bodega histórica",
-        "fechaUltimaActualizacion": "2024-05-01",
-        "historia": "Fundada en 1920",
-        "nombre": "Bodega Ejemplo",
-        "region": {
-          "nombre": "Region Vitivinicola Ejemplo",
-          "descripcion": "Una región conocida por sus vinos tintos",
-          "provincia": {
-            "nombre": "Provincia Ejemplo",
-            "pais": {
-              "nombre": "Pais Ejemplo"
-            }
-          }
-        }
+      {
+          "anada": 2020,
+          "fecha_actualizacion": "2024-05-01",
+          "imagen_etiqueta": "imagen1.jpg",
+          "nombre": "Vino Ejemplo 1",
+          "nota_de_cata_bodega": "Aromas frutales con notas a madera",
+          "precio_ARS": 1500,
+          "bodega": {
+              "coordenadasUbicacion": "34.6037,-58.3816",
+              "descripcion": "Una bodega histórica",
+              "fechaUltimaActualizacion": "2024-05-01",
+              "historia": "Fundada en 1920",
+              "nombre": "Bodega Ejemplo",
+              "periodoActualizacion": "2024-05-01",
+              "region_vitivinicola": {
+                  "nombre": "Region Vitivinicola Ejemplo",
+                  "descripcion": "Una región conhecida por sus vinos tintos",
+                  "provincia": {
+                      "nombre": "Provincia Ejemplo",
+                      "pais": {
+                          "nombre": "Pais Ejemplo"
+                      }
+                  }
+              }
+          },
+          "varietales": [
+              {
+                  "descripcion": "Malbec",
+                  "porcentaje_composicion": 100
+              }
+          ],
+          "resenas": [
+              {
+                  "comentario": "Me encanta este vino",
+                  "es_premium": true,
+                  "fecha_resena": "2020-01-01",
+                  "puntaje": 8
+              },
+              {
+                  "comentario": "No me encanta este vino",
+                  "es_premium": true,
+                  "fecha_resena": "2020-01-01",
+                  "puntaje": 2
+              }
+          ]
       },
-      "varietal": [
-        {
-          "descripcion": "Malbec",
-          "porcentajeComposicion": 100
-        }
-      ],
-      "reseñas": [
-        {
-          "comentario": "Excelente vino, muy recomendado",
-          "esPremium": true,
-          "fechaReseña": "2024-04-01",
-          "puntaje": 95,
-          "esDefinitivo": true,
-          "esDePeriodo": false,
-          "esSommelier": true
-        }
-      ]
-    },
-    {
-      "añada": 2018,
-      "fechaActualizacion": "2024-03-15",
-      "imagenEtiqueta": "imagen2.jpg",
-      "nombre": "Vino Ejemplo 2",
-      "notaDeCataBodega": "Notas de frutos rojos y especias",
-      "precioARS": 1200,
-      "bodega": {
-        "coordenadasUbicacion": "32.8894,-68.8458",
-        "descripcion": "Bodega moderna con tecnología avanzada",
-        "fechaUltimaActualizacion": "2024-03-15",
-        "historia": "Innovando desde 2005",
-        "nombre": "Bodega Moderna",
-        "region": {
-          "nombre": "Mendoza",
-          "descripcion": "Región vitivinícola principal de Argentina",
-          "provincia": {
-            "nombre": "Mendoza",
-            "pais": {
-              "nombre": "Argentina"
-            }
-          }
-        }
+      {
+          "anada": 2021,
+          "fecha_actualizacion": "2024-05-01",
+          "imagen_etiqueta": "imagen2.jpg",
+          "nombre": "Vino Ejemplo 2",
+          "nota_de_cata_bodega": "Aromas florales con notas a frutas",
+          "precio_ARS": 2000,
+          "bodega": {
+              "coordenadasUbicacion": "34.6037,-58.3816",
+              "descripcion": "Una bodega moderna",
+              "fechaUltimaActualizacion": "2024-05-01",
+              "historia": "Fundada en 1950",
+              "nombre": "Bodega Ejemplo 2",
+              "periodoActualizacion": "2024-05-01",
+              "region_vitivinicola": {
+                  "nombre": "Region Vitivinicola Ejemplo 2",
+                  "descripcion": "Una región conocida por sus vinos blancos",
+                  "provincia": {
+                      "nombre": "Provincia Ejemplo 2",
+                      "pais": {
+                          "nombre": "Pais Ejemplo 2"
+                      }
+                  }
+              }
+          },
+          "varietales": [
+              {
+                  "descripcion": "Chardonnay",
+                  "porcentaje_composicion": 100
+              }
+          ],
+          "resenas": [
+              {
+                  "comentario": "Me encanta este vino",
+                  "es_premium": true,
+                  "fecha_resena": "2020-01-01",
+                  "puntaje": 9
+              },
+              {
+                  "comentario": "No me gusta este vino",
+                  "es_premium": false,
+                  "fecha_resena": "2020-02-01",
+                  "puntaje": 6
+              }
+          ]
       },
-      "varietal": [
-        {
-          "descripcion": "Cabernet Sauvignon",
-          "porcentajeComposicion": 85
-        },
-        {
-          "descripcion": "Merlot",
-          "porcentajeComposicion": 15
-        }
-      ],
-      "reseñas": [
-        {
-          "comentario": "Muy buen equilibrio, excelente con carnes rojas",
-          "esPremium": false,
-          "fechaReseña": "2024-02-20",
-          "puntaje": 88,
-          "esDefinitivo": true,
-          "esDePeriodo": true,
-          "esSommelier": false
-        }
-      ]
-    },
-    {
-      "añada": 2019,
-      "fechaActualizacion": "2024-04-20",
-      "imagenEtiqueta": "imagen3.jpg",
-      "nombre": "Vino Ejemplo 3",
-      "notaDeCataBodega": "Aromas cítricos y florales",
-      "precioARS": 900,
-      "bodega": {
-        "coordenadasUbicacion": "31.4167,-64.1833",
-        "descripcion": "Bodega familiar con tradición",
-        "fechaUltimaActualizacion": "2024-04-20",
-        "historia": "Generación tras generación desde 1890",
-        "nombre": "Bodega Familiar",
-        "region": {
-          "nombre": "Córdoba",
-          "descripcion": "Región emergente en la producción de vinos",
-          "provincia": {
-            "nombre": "Córdoba",
-            "pais": {
-              "nombre": "Argentina"
-            }
-          }
-        }
-      },
-      "varietal": [
-        {
-          "descripcion": "Torrontés",
-          "porcentajeComposicion": 100
-        }
-      ],
-      "reseñas": [
-        {
-          "comentario": "Fresco y ligero, ideal para días calurosos",
-          "esPremium": false,
-          "fechaReseña": "2024-03-10",
-          "puntaje": 82,
-          "esDefinitivo": false,
-          "esDePeriodo": true,
-          "esSommelier": false
-        }
-      ]
-    },
-    {
-      "añada": 2021,
-      "fechaActualizacion": "2024-02-28",
-      "imagenEtiqueta": "imagen4.jpg",
-      "nombre": "Vino Ejemplo 4",
-      "notaDeCataBodega": "Complejo con notas a tabaco y cuero",
-      "precioARS": 2000,
-      "bodega": {
-        "coordenadasUbicacion": "36.6167,-64.2833",
-        "descripcion": "Bodega boutique con ediciones limitadas",
-        "fechaUltimaActualizacion": "2024-02-28",
-        "historia": "Calidad sobre cantidad desde 2010",
-        "nombre": "Bodega Boutique",
-        "region": {
-          "nombre": "La Pampa",
-          "descripcion": "Región de reciente exploración vitivinícola",
-          "provincia": {
-            "nombre": "La Pampa",
-            "pais": {
-              "nombre": "Argentina"
-            }
-          }
-        }
-      },
-      "varietal": [
-        {
-          "descripcion": "Syrah",
-          "porcentajeComposicion": 100
-        }
-      ],
-      "reseñas": [
-        {
-          "comentario": "Potente y robusto, ideal para coleccionistas",
-          "esPremium": true,
-          "fechaReseña": "2024-01-15",
-          "puntaje": 92,
-          "esDefinitivo": true,
-          "esDePeriodo": false,
-          "esSommelier": true
-        }
-      ]
-    },
-    {
-      "añada": 2017,
-      "fechaActualizacion": "2024-05-10",
-      "imagenEtiqueta": "imagen5.jpg",
-      "nombre": "Vino Ejemplo 5",
-      "notaDeCataBodega": "Equilibrado con notas a vainilla y frutas maduras",
-      "precioARS": 1300,
-      "bodega": {
-        "coordenadasUbicacion": "33.3333,-66.35",
-        "descripcion": "Bodega innovadora con técnicas ecológicas",
-        "fechaUltimaActualizacion": "2024-05-10",
-        "historia": "Enfocados en la sostenibilidad desde 2000",
-        "nombre": "Bodega Ecológica",
-        "region": {
-          "nombre": "San Luis",
-          "descripcion": "Conocida por sus prácticas sostenibles",
-          "provincia": {
-            "nombre": "San Luis",
-            "pais": {
-              "nombre": "Argentina"
-            }
-          }
-        }
-      },
-      "varietal": [
-        {
-          "descripcion": "Chardonnay",
-          "porcentajeComposicion": 100
-        }
-      ],
-      "reseñas": [
-        {
-          "comentario": "Agradable y suave, perfecto para pescados",
-          "esPremium": false,
-          "fechaReseña": "2024-04-05",
-          "puntaje": 87,
-          "esDefinitivo": true,
-          "esDePeriodo": true,
-          "esSommelier": false
-        }
-      ]
-    },
-    {
-      "añada": 2016,
-      "fechaActualizacion": "2024-03-01",
-      "imagenEtiqueta": "imagen6.jpg",
-      "nombre": "Vino Ejemplo 6",
-      "notaDeCataBodega": "Aromas a frutos secos y chocolate",
-      "precioARS": 1800,
-      "bodega": {
-        "coordenadasUbicacion": "32.8917,-68.8383",
-        "descripcion": "Bodega con premios internacionales",
-        "fechaUltimaActualizacion": "2024-03-01",
-        "historia": "Premiada internacionalmente desde 1995",
-        "nombre": "Bodega Internacional",
-        "region": {
-          "nombre": "Mendoza",
-          "descripcion": "Cuna del vino argentino",
-          "provincia": {
-            "nombre": "Mendoza",
-            "pais": {
-              "nombre": "Argentina"
-            }
-          }
-        }
-      },
-      "varietal": [
-        {
-          "descripcion": "Pinot Noir",
-          "porcentajeComposicion": 100
-        }
-      ],
-      "reseñas": [
-        {
-          "comentario": "Elegante y sofisticado, ideal para cenas formales",
-          "esPremium": true,
-          "fechaReseña": "2024-02-15",
-          "puntaje": 90,
-          "esDefinitivo": true,
-          "esDePeriodo": true,
-          "esSommelier": true
-        }
-      ]
-    }
+      {
+          "anada": 2022,
+          "fecha_actualizacion": "2024-05-01",
+          "imagen_etiqueta": "imagen3.jpg",
+          "nombre": "Vino Ejemplo 3",
+          "nota_de_cata_bodega": "Aromas a frutas y flores",
+          "precio_ARS": 1800,
+          "bodega": {
+              "coordenadasUbicacion": "34.6037,-58.3816",
+              "descripcion": "Una bodega histórica",
+              "fechaUltimaActualizacion": "2024-05-01",
+              "historia": "Fundada en 1920",
+              "nombre": "Bodega Ejemplo 3",
+              "periodoActualizacion": "2024-05-01",
+              "region_vitivinicola": {
+                  "nombre": "Region Vitivinicola Ejemplo 3",
+                  "descripcion": "Una región conocida por sus vinos tintos",
+                  "provincia": {
+                      "nombre": "Provincia Ejemplo 3",
+                      "pais": {
+                          "nombre": "Pais Ejemplo 3"
+                      }
+                  }
+              }
+          },
+          "varietales": [
+              {
+                  "descripcion": "Malbec",
+                  "porcentaje_composicion": 100
+              }
+          ],
+          "resenas": [
+              {
+                  "comentario": "Me encanta este vino",
+                  "es_premium": false,
+                  "fecha_resena": "2020-01-01",
+                  "puntaje": 8
+              },
+              {
+                  "comentario": "No me gusta este vino",
+                  "es_premium": false,
+                  "fecha_resena": "2020-02-01",
+                  "puntaje": 6
+              }
+          ]
+      }
   ]
 }

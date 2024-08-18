@@ -1,3 +1,4 @@
+import json
 from Clases.clase_resena import Resena
 from Clases.clase_pais import Pais
 from Clases.clase_provincia import Provincia
@@ -151,3 +152,77 @@ def get_vinos():
     vinos = [vino1, vino2, vino3]
     
     return vinos
+
+def crear_vinos_desde_json(json_data):
+    vinos = []
+    
+    for vino_data in json_data['vinos']:
+        # Crear el objeto Pais
+        pais = Pais(nombre=vino_data['bodega']['region_vitivinicola']['provincia']['pais']['nombre'])
+        
+        # Crear el objeto Provincia
+        provincia = Provincia(nombre=vino_data['bodega']['region_vitivinicola']['provincia']['nombre'], pais=pais)
+        
+        # Crear el objeto RegionVitivinicola
+        region_vitivinicola = RegionVitivinicola(
+            nombre=vino_data['bodega']['region_vitivinicola']['nombre'],
+            descripcion=vino_data['bodega']['region_vitivinicola']['descripcion'],
+            provincia=provincia
+        )
+        
+        # Crear el objeto Bodega
+        bodega = Bodega(
+            coordenadasUbicacion=vino_data['bodega']['coordenadasUbicacion'],
+            descripcion=vino_data['bodega']['descripcion'],
+            fechaUltimaActualizacion=vino_data['bodega']['fechaUltimaActualizacion'],
+            historia=vino_data['bodega']['historia'],
+            nombre=vino_data['bodega']['nombre'],
+            periodoActualizacion=vino_data['bodega']['periodoActualizacion'],
+            region_vitivinicola=region_vitivinicola
+        )
+        
+        # Crear los objetos Varietal
+        varietales = [
+            Varietal(descripcion=varietal['descripcion'], porcentaje_composicion=varietal['porcentaje_composicion'])
+            for varietal in vino_data['varietales']
+        ]
+        
+        # Crear el objeto Vino
+        vino = Vino(
+            anada=vino_data['anada'],
+            fecha_actualizacion=vino_data['fecha_actualizacion'],
+            imagen_etiqueta=vino_data['imagen_etiqueta'],
+            nombre=vino_data['nombre'],
+            nota_de_cata_bodega=vino_data['nota_de_cata_bodega'],
+            precio_ARS=vino_data['precio_ARS'],
+            bodega=bodega,
+            varietales=varietales
+        )
+        
+        # Crear las Resenas asociadas a este Vino
+        resenas = [
+            Resena(
+                comentario=resena['comentario'],
+                es_premium=resena['es_premium'],
+                fecha_resena=resena['fecha_resena'],
+                puntaje=resena['puntaje'],
+                vino=vino
+            )
+            for resena in vino_data['resenas']
+        ]
+        
+        # Añadir las resenas al vino
+        vino.resenas = resenas
+        
+        # Añadir el vino a la lista
+        vinos.append(vino)
+    
+    return vinos
+
+ruta_json = 'Data/vinos.json'
+with open(ruta_json, 'r') as file:
+    json_data = json.load(file)
+    
+vinos = crear_vinos_desde_json(json_data)
+
+print(vinos[0].resenas[0].comentario)
